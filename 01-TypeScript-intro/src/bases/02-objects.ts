@@ -21,3 +21,18 @@ interface Pokemon {
     name: string | string,// puede aceptar 2 opciones
     age?: number,  // puede ser nulo
 }
+
+
+export const pokemons: Pokemon[] = [
+    {
+        id: 1,
+        name: 'pikachu',
+    }
+];
+
+pokemons.push({
+    id: 2,
+    name: 'charmander',
+});
+
+pokemons.push(bulbasaur);
