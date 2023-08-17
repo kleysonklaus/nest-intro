@@ -25,7 +25,7 @@ export class Pokemon {
     }
 
     async getMoves(): Promise<Move[]> {
-        const data = await this.http.get('https://pokeapi.co/api/v2/pokemon/4');
+        const data = await this.http.get<PokeapiResponse>('https://pokeapi.co/api/v2/pokemon/4');
         console.log(data.moves);
 
         return data.moves;

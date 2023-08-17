@@ -3,10 +3,10 @@ import axios from 'axios';
 
 export class PokeApiAdapter {
 
-    private readonly _axios = axios;
+    private readonly http = axios;
 
-    async get(url: string) {
-        const { data } = await this._axios.get(url);
+    async get<T>(url: string): Promise<T> {
+        const { data } = await this.http.get<T>(url);
         return data;
     }
 
